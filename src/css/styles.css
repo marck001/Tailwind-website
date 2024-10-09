@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+@layer components{
+
+    .dropdown-content{
+        @apply invisible p-4;
+    }
+}
+

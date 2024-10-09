@@ -5,18 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UrCoding</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Seymour+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Seymour+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belgrano&family=Gabarito:wght@400..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     
-    <header>
+    <header >
+      <div class="main-header flex  bg-gray-100 " id="nav-menu">
+        <div class="logo">
+            <a routerLink="/home">
+                <img src="./assets/img/logo/logo-light1.png" width="120px" id="logo-img">
+            </a>
+
+        </div>
+
+        <div class="header-content">
+            <div class="row flex gap-2 my-4">
+                <ul class="nav flex gap-10 ">
+                    <li class="item dropdown"><a routerLink="/courses">Courses<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content invisible">
+                            <p><a routerLink="/courses/full-stack">Full stack</a></p>
+                            <p><a routerLink="/courses/python">Data science Python</a></p>
+                            <p><a routerLink="/courses/back-end">Backend</a></p>
+                            <p><a routerLink="/courses/front-end">Front-end</a></p>
+                            <p><a routerLink="/courses/networking">Networking</a></p>
+                        </div>
+                    </li>
+                    <li class="item dropdown"><a  routerLink="/tutorials">Tutorials<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <p><a routerLink="/tutorials/javascript">Javascript</a></p>
+                            <p><a>Python</a></p>
+                            <p><a>Java</a></p>
+                            <p><a routerLink="/tutorials/linux">Linux</a></p>
+                            <p><a>C</a></p>
+                        </div>
+                    </li>
+                    <li class="item dropdown"><a>Services<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <p><a routerLink="/courses">Courses</a></p>
+                            <p><a routerLink="/contacts">Contact</a></p>
+                            <p><a routerLink="/about" >About-me</a></p>
+                        </div>
+                    </li>
+                    <li class="item dropdown"><a>Ai<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <p><a routerLink="/courses/machine-learning">Machine Leaning</a></p>
+                            <p><a>Deep Learning</a></p>
+                            <p><a>Ai algorithms</a></p>
+                        </div>
+                    </li>
+                    <li class="item dropdown"><a>Register<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <p><a routerLink="/form">Sign-up</a></p>
+                            <p><a routerLink="/form">Login</a></p>
+                            <p><a routerLink="/subscription">Subscription</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row2 flex">
+            <div class="hidden content ">
+                <div class="icons">
+
+                    <a ><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a><i class="fa-solid fa-circle-half-stroke" id="btn-toggle"></i></a>
+                    <a><i class="fas fa-globe"></i></a>
+                </div>
+                <a id="signUp-btn" class="bg-gray-200 p-6" routerLink="/form">Sign Up</a>
+
+            </div>
+        </div>
+        <a id="menu-icon ">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+    </div>
+    <div class="sub-header " id="navbar">
+        <a routerLink="/courses">HTML</a>
+        <a>JAVA</a>
+        <a>JAVASCRIPT</a>
+        <a>CSS</a>
+        <a>BOOTSTRAP</a>
+        <a>MACHINE LEARNING</a>
+        <a>NODEJS</a>
+        <a>ALGORITHMS</a>
+    </div>
+
 
     </header>
 
     <main>
+
         <div id="card" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8">
-            <img id="bg" class="w-full" src="https://deadline.com/wp-content/uploads/2021/02/hatsune-miku.jpg?w=1000" alt="Sunset in the mountains">
+            <img id="bg" class="w-full" src="https://www.archlinux.org/static/logos/archlinux-logo-dark-1200dpi.b42bd35d5916.png">
             <div class="px-6 py-4">
-              <div id="headline" class="font-bold text-xl mb-2">The Coolest Miku</div>
+              <div id="headline" class="font-bold text-xl mb-2">I use arch btw</div>
               <p id="body" class="text-gray-600 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
