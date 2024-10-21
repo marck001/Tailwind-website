@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MacKoos</title>
+  <title>MacKourse</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/src/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -41,106 +41,126 @@
 
 <body>
 
-  <header class="text-[var(--text-color)] font-[var(--header-font)] text-lg">
-    <div class="bg-gray-100  flex justify-between items-center p-4 flex-wrap w-full" id="nav-menu">
-      <div class="logo">
-        <a>
-          <img src="/src/assets/img/logo/logo-light1.png" class="w-28" id="logo-img" alt="Logo">
-        </a>
-      </div>
+<header>
+  <nav class="px-2 py-2 bg-white border-gray-200  dark:border-gray-700">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="#" class="flex items-center">
+        <img src="/src/assets/img/logo/logo-light.png" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+      <!--  <span class="self-center text-xl font-semibold whitespace-nowrap ">MacKourse</span>-->
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-multi-level" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Courses
+              <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg></button>
 
-
-      <div class="header-content flex justify-evenly items-center w-full md:flex-row  ">
-        <ul class="flex gap-12 list-none">
-          <li class="relative group">
-            <a routerLink="/courses" class="flex items-center">
-              Courses
-              <i class="fa-solid fa-chevron-down ml-1"></i>
-            </a>
-
-            <div
-              class="absolute hidden group-hover:block bg-[var(--border-color)] text-[var(--text-color)] shadow-lg mt-2 z-10">
-              <p><a routerLink="/courses/full-stack" class="block p-2">Full stack</a></p>
-              <p><a routerLink="/courses/python" class="block p-2">Data science Python</a></p>
-              <p><a routerLink="/courses/back-end" class="block p-2">Backend</a></p>
-              <p><a routerLink="/courses/front-end" class="block p-2">Front-end</a></p>
-              <p><a routerLink="/courses/networking" class="block p-2">Networking</a></p>
+            <div id="dropdownNavbar"
+              class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44">
+              <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">IT</a>
+                </li>
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
+                    data-dropdown-placement="right-start" type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 ">Programming<svg
+                      aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg></button>
+                  <div id="doubleDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 ">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Python</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Java</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Machine
+                          Learning</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">DSA</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Science</a>
+                </li>
+              </ul>
+              <div class="py-1">
+                <a href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                  out</a>
+              </div>
             </div>
           </li>
-
-          <li class="relative group">
-            <a routerLink="/tutorials" class="flex items-center">
-              Tutorials
-              <i class="fa-solid fa-chevron-down ml-1"></i>
-            </a>
-            <div
-              class="absolute hidden group-hover:block bg-[var(--border-color)] text-[var(--text-color)] shadow-lg mt-2 z-10">
-              <p><a routerLink="/tutorials/html" class="block p-2">HTML</a></p>
-              <p><a routerLink="/tutorials/css" class="block p-2">CSS</a></p>
-              <p><a routerLink="/tutorials/js" class="block p-2">JavaScript</a></p>
-            </div>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Services</a>
           </li>
-          <li class="relative group">
-            <a routerLink="/ai" class="flex items-center">
-              AI
-              <i class="fa-solid fa-chevron-down ml-1"></i>
-            </a>
-            <div
-              class="absolute hidden group-hover:block bg-[var(--border-color)] text-[var(--text-color)] shadow-lg mt-2 z-10">
-              <p><a routerLink="/ai/machine-learning" class="block p-2">Machine Learning</a></p>
-              <p><a routerLink="/ai/deep-learning" class="block p-2">Deep Learning</a></p>
-            </div>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Pricing</a>
           </li>
-          <li class="relative group">
-            <a routerLink="/ai" class="flex items-center">
-              Register
-              <i class="fa-solid fa-chevron-down ml-1"></i>
-            </a>
-            <div
-              class="absolute hidden group-hover:block bg-[var(--border-color)] text-[var(--text-color)] shadow-lg mt-2 z-10">
-              <a routerLink="/services" class="block p-2">Login</a>
-              <a routerLink="/services" class="block p-2">Subscription</a>
-            </div>
+          <li>
+            <a href="#"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Contact</a>
           </li>
         </ul>
       </div>
-
-      <div class="row2 flex gap-4 justify-center">
-      <div class="flex hidden md:flex space-x-4">
-        <a><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a><i class="fa-solid fa-circle-half-stroke" id="btn-toggle"></i></a>
-        <a><i class="fas fa-globe"></i></a>
-      </div>
-
-
-      <a id="signUp-btn" routerLink="/form" class="hidden md:inline-block p-4 bg-blue-600 text-white rounded">Sign
-        Up</a>
-      </div>
-
-      <a id="menu-icon" class="md:hidden">
-        <i class="fa-solid fa-bars"></i>
-      </a>
     </div>
-
-
-    <div class="sub-header bg-cyan-200 text-white text-center sticky top-0 w-full p-2 z-0">
-      <a routerLink="/courses/html" class="px-2">HTML</a>
-      <a routerLink="/courses/java" class="px-2">JAVA</a>
-      <a routerLink="/courses/javascript" class="px-2">JAVASCRIPT</a>
-      <a routerLink="/courses/css" class="px-2">CSS</a>
-      <a routerLink="/courses/bootstrap" class="px-2">BOOTSTRAP</a>
-      <a routerLink="/courses/machine-learning" class="px-2">MACHINE LEARNING</a>
-      <a routerLink="/courses/nodejs" class="px-2">NODEJS</a>
-      <a routerLink="/courses/algorithms" class="px-2">ALGORITHMS</a>
-    </div>
-  </header>
-
+  </nav>
+  <div class="sub-header bg-cyan-200 text-white text-center sticky top-0 w-full p-2 z-40">
+    <a routerLink="/courses/html" class="px-2">SCIENSE</a>
+    <a routerLink="/courses/java" class="px-2">GOOGLE CERTIFICATE</a>
+    <a routerLink="/courses/javascript" class="px-2">JAVASCRIPT</a>
+    <a routerLink="/courses/css" class="px-2">BIOLOGY</a>
+    <a routerLink="/courses/bootstrap" class="px-2">ARTS</a>
+    <a routerLink="/courses/machine-learning" class="px-2">MACHINE LEARNING</a>
+    <a routerLink="/courses/nodejs" class="px-2">LAW</a>
+    <a routerLink="/courses/algorithms" class="px-2">ALGORITHMS</a>
+  </div>
+</header>
 
 
   <main>
 
-    <section class="relative overflow-hidden w-full bg-slate-100">
-      <div class="relative w-full overflow-hidden">
+    <section
+      class="relative overflow-hidden w-full animated-background bg-gradient-to-r from-slate-200 via-slate-200 to-slate-300">
+      <div class="relative w-full overflow-hidden ">
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
@@ -152,109 +172,846 @@
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
       </div>
-      
-      <div class="relative z-10 p-10">
+
+      <div class="relative z-10 p-10 ">
         <div class="flex flex-col items-center">
-          <h3 class="text-2xl font-bold">What are you looking for?</h3>
+          <h3 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-purple-700 my-4 text-center">What are you looking for?</h3>
           <div class="mt-4 relative flex items-center">
-            <input type="search" placeholder="Search.." class="border-2 border-gray-400 p-2 rounded-l-md w-60" id="search-input">
+            <input type="search" placeholder="Search.." class="border-2 border-gray-400 p-2 rounded-l-md w-60"
+              id="search-input">
             <button type="submit" id="search-button" class="bg-gray-700 p-2 rounded-r-md text-white">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <ul id="search-results" class="absolute left-1/2 transform -translate-x-1/2 mt-2 max-h-40 overflow-y-auto bg-gray-800 text-white w-60 hidden">
-         
+            <ul id="search-results"
+              class="absolute left-1/2 transform -translate-x-1/2 mt-2 max-h-40 overflow-y-auto bg-gray-800 text-white w-60 hidden">
+
             </ul>
           </div>
-          <p class="mt-4">Everything you're learning, just here</p>
-          <div class="flex gap-4 mt-4">
-            <p><a routerLink="/courses/full-stack" class="text-blue-500">Full stack</a></p>
-            <p><a routerLink="/courses/back-end" class="text-blue-500">Backend dev</a></p>
-            <p><a routerLink="/courses/front-end" class="text-blue-500">Frontend dev</a></p>
-            <p><a routerLink="/courses/networking" class="text-blue-500">Networking dev</a></p>
+          <div class="relative inline-block mt-6">
+            <span class="text-xl md:text-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-sky-400 to-cyan-500">
+              Achieve your career goals
+            </span>
+            <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-500 rounded-full"></span>
+          </div>
+          <div class="flex gap-4 mt-6">
+            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden"><a routerLink="/courses/full-stack" class=" ">Programming</a></p>
+            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer"><a class="">Biology</a></p>
+            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer"><a class="">Science</a></p>
+            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden"><a class="">Law</a></p>
           </div>
         </div>
-        
+
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/python.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/certificate.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Python Course</h4>
+              <h4 class="text-xl font-semibold text-gray-800">Earn Certificates</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Learn Python: From basics to building apps and games</p>
+              <p class="text-gray-600">Get valuable certificates with subscription</p>
             </div>
           </div>
-    
+
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/js.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/knowledge.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Javascript Course</h4>
+              <h4 class="text-xl font-semibold text-gray-800">Build knowledge</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Learn JavaScript: Basics to building dynamic sites..</p>
+              <p class="text-gray-600">Build your knowledge and enhance your expertise...</p>
             </div>
           </div>
-    
+
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/machine-logo.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/master.webp" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Machine Learning</h4>
+              <h4 class="text-xl font-semibold text-gray-800">Master</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Master Machine Learning: Basics to practical use....</p>
+              <p class="text-gray-600">Master your skills from basics to practical use....</p>
             </div>
           </div>
         </div>
-    
+
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/practice.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/practice.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800">Practice</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Practice: Sharpen your skills with hands-on challenges.</p>
+              <p class="text-gray-600">Sharpen your skills with hands-on challenges.</p>
             </div>
           </div>
-    
+
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/reading.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/read.webp"
+              class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800">Read</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Read: Expand your knowledge and deepen your expertise.</p>
+              <p class="text-gray-600">Expand your knowledge and deepen your expertise.</p>
             </div>
           </div>
-    
+
           <div class="bg-white border p-4 rounded-md shadow">
-            <img src="/assets/img/course-img/reading.webp" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="/src/assets/img/general/learn.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800">Learn</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Learn: Build a strong foundation and grow with confidence.</p>
+              <p class="text-gray-600">Build a strong foundation and grow with confidence.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
 
 
 
-    <div id="card" class="max-w-sm rounded overflow-hidden shadow-lg mx-auto my-8">
-      <img id="bg" class="w-full"
-        src="https://www.archlinux.org/static/logos/archlinux-logo-dark-1200dpi.b42bd35d5916.png">
-      <div class="px-6 py-4">
-        <div id="headline" class="font-bold text-xl mb-2">I use arch btw</div>
-        <p id="body" class="text-gray-600 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis
-          eaque, exercitationem praesentium nihil.
-        </p>
+    <div class="bg-gray-100 flex">
+      <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+        <div class="xl:max-w-lg xl:ml-auto">
+         
+          <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+            You can access from anywhere.
+            <br class="hidden lg:inline"><span class="text-indigo-500"> Unlimited Access to over 1,000 Courses</span>
+          </h1>
+          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
+            Get unlimited access to 1,000 free courses across various fields, from programming to design,science, anytime, anywhere.
+          </p>
+          <div class="mt-4 sm:mt-6">
+            <a href="#"
+              class="inline-block px-5 py-3 rounded-lg shadow-lg bg-indigo-500 text-sm text-white uppercase tracking-wider font-semibold sm:text-base">Explore
+              more</a>
+          </div>
+        </div>
       </div>
-      <div class="px-6 py-4">
-        <div id="cta" class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold mr-2 w-full">
-          #photography</div>
+      <div class="hidden lg:block lg:w-1/2 lg:relative">
+        <img class="absolute inset-0 h-full w-full object-cover object-center"
+          src="https://www.wemakescholars.com/uploads/blog/TopprofessionalITcoursetopursueincollege.jpg">
       </div>
     </div>
+    <section class="courses">
+
+      <div class="row p-6 my-4">
+
+
+        <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
+          <h4 class="text-2xl font-mono">Programming</h4>
+          <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+            <span class="relative invisible">View all</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="/src/assets/img/course-img/data-science.jpg"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold ">Data Science</h2>
+                <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Intermediate Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="/src/assets/img/course-img/full-stack-web.jpg"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold">Web-development</h2>
+               <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    15</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.4</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="/src/assets/img/course-img/machine.webp"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold">Machine Learning</h2>
+                  <!--<p></p>-->                      
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.8</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="/src/assets/img/course-img/linux.jpg"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold">Linux</h2>
+                 <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    8</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
 
 
 
+        </div>
+      </div>
+
+      <div class="row p-6 my-4">
+
+
+        <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
+          <h4 class="text-2xl font-mono">Science</h4>
+          <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-indigo-500 rounded-full shadow-md group">
+            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-indigo-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+            <span class="absolute flex items-center justify-center w-full h-full text-indigo-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+            <span class="relative invisible">View all</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/23/22bc54f77f45a2b057f4ff518d272f/iStock-1169539468.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-indigo-300 text-indigo-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold ">Data Science</h2>
+                <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="https://nailknowledge.org/wp-content/uploads/2021/04/chemical-1024x683.jpg"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-indigo-300 text-indigo-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold ">Chemical Science</h2>
+                <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3fkhqS75e7wMU7IU9h45n6f2J5DMSdHo3w&s"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-indigo-300 text-indigo-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold ">Medicine Science</h2>
+                <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+
+          <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUdF7IvR67glRsR8yVUIfXTet1BNSaZCDPw&s"
+                  alt="">
+              </div>
+              <div class="p-4">
+                <span
+                  class="inline-block px-2 py-1 leading-none bg-indigo-300 text-indigo-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
+                <h2 class="mt-2 mb-2  font-bold ">Biology Science</h2>
+                <!--<p></p>-->
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                    16</span>&nbsp;<span class="text-sm font-semibold"></span>
+                </div>
+              </div>
+              <div class="p-4 border-t border-b text-xs text-gray-800">
+                <span class="flex items-center">
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                </span>
+              </div>
+              <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-yellow-500">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 fill-current text-gray-400">
+                  <path
+                    d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
+                  </path>
+                </svg><span class="ml-2">4.7</span></div>
+              <div class="flex items-center p-4 justify-end ">
+                <button
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
+                  Course</button>
+              </div>
+            </a>
+          </div>
+          
+
+
+
+        </div>
+      </div>
+
+      
+    </section>
+
+
+    <section>
+      <div class="container max-w-full mx-auto py-24 px-6">
+        <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider">
+          Pricing
+        </h1>
+        <p class="text-center text-lg text-gray-700 mt-2 px-6">
+        Check all plans
+        </p>
+        <div class="h-1 mx-auto bg-indigo-200 w-24 opacity-75 mt-4 rounded"></div>
+
+        <div class="max-w-full md:max-w-6xl mx-auto my-3 md:px-8">
+          <div class="relative  flex flex-col md:flex-row items-center">
+            <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-mr-4">
+              <div class="bg-white text-black rounded-lg shadow-inner  overflow-hidden">
+                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
+                  <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
+                    Free Plan
+                  </h1>
+                  <h2 class="text-sm text-gray-500 text-center pb-6">FREE</h2>
+
+                 Get in touch for details.
+                </div>
+
+                <div class="flex flex-wrap mt-3 px-6">
+                  <ul>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Limited Access</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Free courses</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Free plan acccess</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class=" flex items-center p-8  uppercase">
+                  <button class="mt-3 text-lg font-semibold 
+      bg-black w-full text-white rounded-lg 
+      px-6 py-3 block shadow-xl hover:bg-gray-700">
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="w-full max-w-md sm:w-2/3 lg:w-1/3 sm:my-5 my-8 relative z-10 bg-white rounded-lg shadow-lg">
+              <div
+                class="text-sm leading-none rounded-t-lg bg-gray-200 text-black font-semibold uppercase py-4 text-center tracking-wide">
+                Most Popular
+              </div>
+              <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
+                <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
+                  Basic
+                </h1>
+                <h2 class="text-sm text-gray-500 text-center pb-6"><span class="text-3xl"><sup>$</sup>9.9 </span> /mo</h2>
+
+                Get in touch for details.
+              </div>
+              <div class="flex pl-12 justify-start sm:justify-start mt-3">
+                <ul>
+                  <li class="flex items-center">
+                    <div class="rounded-full p-2 fill-current text-green-700">
+                      <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 text-lg ml-3">Unlimited Access</span>
+                  </li>
+                  <li class="flex items-center">
+                    <div class=" rounded-full p-2 fill-current text-green-700">
+                      <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 text-lg ml-3">Paid Courses and videos</span>
+                  </li>
+                  <li class="flex items-center">
+                    <div class=" rounded-full p-2 fill-current text-green-700">
+                      <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 text-lg ml-3">Paid plan</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class=" flex items-center p-8  uppercase">
+                <button class="mt-3 text-lg font-semibold 
+      bg-black w-full text-white rounded-lg 
+      px-6 py-3 block shadow-xl hover:bg-gray-700">
+                  Select
+                </button>
+              </div>
+            </div>
+            <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-ml-4">
+              <div class="bg-white text-black rounded-lg shadow-inner overflow-hidden">
+                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
+                  <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
+                    Pro
+                  </h1>
+                  <h2 class="text-sm text-gray-500 text-center pb-6"><sup>$</sup>19.9/mo</h2>
+
+                  Get in touch for details.
+                </div>
+                <div class="flex flex-wrap mt-3 px-6">
+                  <ul>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Unlimited Access</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Paid Courses + tutoring</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div class=" rounded-full p-2 fill-current text-green-700">
+                        <svg class="w-6 h-6 align-middle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <span class="text-gray-700 text-lg ml-3">Paid plan</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="flex items-center p-8  uppercase">
+                  <button class="mt-3 text-lg font-semibold 
+      bg-black w-full text-white rounded-lg 
+      px-6 py-3 block shadow-xl hover:bg-gray-700">
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq bg-gray-100 relative w-full z-50">
+      <div class="faq-container mx-auto py-16 px-4 max-w-7xl serif">
+        <div class="faq-header border-b-2 border-blue-600 w-10 mx-auto mb-6"></div>
+        <h1 class="text-center text-2xl text-blue-900">Frequently Asked Questions</h1>
+        <div class="accordion pt-12">
+          <details class="mb-4">
+            <summary
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              <div class="flex justify-between items-center">
+                <span>Does the subscription plan include this course?</span>
+                <span class="transition-transform duration-300"></span>
+              </div>
+            </summary>
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+              <p>90% of courses are included with the subscription plan, providing access to all of them.</p>
+            </div>
+          </details>
+
+          <details class="mb-4">
+            <summary
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              <div class="flex justify-between items-center">
+                <span>What's the validity of this course?</span>
+                <span class="transition-transform duration-300"></span>
+              </div>
+            </summary>
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+              <p>The course content comes with over 1 year of validity.</p>
+            </div>
+          </details>
+
+          <details class="mb-4">
+            <summary
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              <div class="flex justify-between items-center">
+                <span>Which courses are for free?</span>
+                <span class="transition-transform duration-300"></span>
+              </div>
+            </summary>
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+              <p>We have a whole section of free courses that you can check.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
 
     <section class="mb-32 text-gray-800 text-center bg-slate-200">
 
@@ -312,51 +1069,7 @@
       </div>
     </section>
 
-    <section class="faq bg-gray-100 relative w-full z-50">
-      <div class="faq-container mx-auto py-16 px-4 max-w-7xl serif">
-          <div class="faq-header border-b-2 border-blue-600 w-10 mx-auto mb-6"></div>
-          <h1 class="text-center text-2xl text-blue-900">Frequently Asked Questions</h1>
-          <div class="accordion pt-12">
-              <details class="mb-4">
-                  <summary class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
-                      <div class="flex justify-between items-center">
-                          <span>Does the subscription plan include this course?</span>
-                          <span class="transition-transform duration-300"></span>
-                      </div>
-                  </summary>
-                  <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
-                      <p>90% of courses are included with the subscription plan, providing access to all of them.</p>
-                  </div>
-              </details>
-  
-              <details class="mb-4">
-                  <summary class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
-                      <div class="flex justify-between items-center">
-                          <span>What's the validity of this course?</span>
-                          <span class="transition-transform duration-300"></span>
-                      </div>
-                  </summary>
-                  <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
-                      <p>The course content comes with over 1 year of validity.</p>
-                  </div>
-              </details>
-  
-              <details class="mb-4">
-                  <summary class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
-                      <div class="flex justify-between items-center">
-                          <span>Which courses are for free?</span>
-                          <span class="transition-transform duration-300"></span>
-                      </div>
-                  </summary>
-                  <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
-                      <p>We have a whole section of free courses that you can check.</p>
-                  </div>
-              </details>
-          </div>
-      </div>
-  </section>
-  
-    
+
 
   </main>
 
@@ -364,19 +1077,19 @@
     <section class="flex md:flex-col lg:flex-row lg:items-center mb-6">
       <div class="text-center mx-auto md:mb-6 lg:text-left">
         <a href="#" class="block mb-4">
-          <img class="block h-8 mx-auto lg:mx-0" src="/src/assets/img/logo/full-logo-light-style.png" width="200px"
+          <img class="block h-8 mx-auto lg:mx-0" src="/src/assets/img/logo/logo-light.png" width="200px"
             height="200px" alt="Workflow">
         </a>
-        <p class="mb-4 text-sm">Making the world a better place through <br> constructing elegant hierarchies.</p>
+        <p class="mb-4 text-sm">Making the world a better place through <br> constructing elegant websites.</p>
         <span class="space-x-6">
           <a href="#" class="hover:text-indigo-500"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="hover:text-indigo-500"><i class="fa-brands fa-github"></i></i></a>
+          <a href="https://github.com/marck001/Tailwind-website" class="hover:text-indigo-500"><i class="fa-brands fa-github"></i></i></a>
           <a href="#" class="hover:text-indigo-500"><i class="fab fa-twitter"></i></a>
         </span>
       </div>
       <ul class="hidden md:flex flex-auto justify-around">
         <li>
-          <h5 class="text-slate-400 font-medium tracking-wider mb-3">SOLUTIONS</h5>
+          <h5 class="text-slate-400 font-medium tracking-wider mb-3">COURSES</h5>
           <ul class="space-y-3">
             <li><a href="#" class="hover:opacity-75">Marketing</a></li>
             <li><a href="#" class="hover:opacity-75">Analytics</a></li>
@@ -387,10 +1100,10 @@
         <li>
           <h5 class="text-slate-400 font-medium tracking-wider mb-3">Web-development</h5>
           <ul class="space-y-3">
-            <li><a href="#" class="hover:opacity-75">Pricing</a></li>
+            <li><a href="#" class="hover:opacity-75">Full-Stack</a></li>
             <li><a href="#" class="hover:opacity-75">Documentation</a></li>
             <li><a href="#" class="hover:opacity-75">Guides</a></li>
-            <li><a href="#" class="hover:opacity-75">API Status</a></li>
+            <li><a href="#" class="hover:opacity-75">APIs</a></li>
           </ul>
         </li>
         <li>
@@ -414,10 +1127,10 @@
       </ul>
     </section>
     <hr>
-    <h6 class="py-6 text-center"> © 2024 Workflow, Inc. All rights reserved.</h6>
+    <h6 class="py-6 text-center"> © 2024 MacKourse, Inc. All rights reserved.</h6>
   </footer>
 
-
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
 </html>
