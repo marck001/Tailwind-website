@@ -41,125 +41,126 @@
 
 <body>
 
-<header>
-  <nav class="px-2 py-2 bg-white border-gray-200  dark:border-gray-700">
-    <div class="container flex flex-wrap items-center justify-between mx-auto">
-      <a href="#" class="flex items-center">
-        <img src="assets/img/logo/logo-light.png" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
-      <!--  <span class="self-center text-xl font-semibold whitespace-nowrap ">MacKourse</span>-->
-      </a>
-      <button data-collapse-toggle="navbar-multi-level" type="button"
-        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-        aria-controls="navbar-multi-level" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-        <ul
-          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
-              aria-current="page">Home</a>
-          </li>
-          <li>
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Courses
-              <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-              </svg></button>
+  <header>
+    <nav class="px-2 py-2 bg-white border-gray-200  dark:border-gray-700 dark:bg-slate-950">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="#" class="flex items-center">
+          <img src="assets/img/logo/logo-light.png" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+          <!--  <span class="self-center text-xl font-semibold whitespace-nowrap ">MacKourse</span>-->
+        </a>
+        <button data-collapse-toggle="navbar-multi-level" type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-multi-level" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto dark:bg-slate-900 " id="navbar-multi-level">
+          <ul
+            class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-slate-900 dark:text-slate-100">
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 "
+                aria-current="page">Home</a>
+            </li>
+            <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-slate-200 ">Courses
+                <svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg></button>
 
-            <div id="dropdownNavbar"
-              class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44">
-              <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">IT</a>
-                </li>
-                <li aria-labelledby="dropdownNavbarLink">
-                  <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
-                    data-dropdown-placement="right-start" type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 ">Programming<svg
-                      aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clip-rule="evenodd"></path>
-                    </svg></button>
-                  <div id="doubleDropdown" class="z-50 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 ">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                      <li>
-                        <a href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Python</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Java</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Machine
-                          Learning</a>
-                      </li>
-                      <li>
-                        <a href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">DSA</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
+              <div id="dropdownNavbar"
+                class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-slate-800 dark:text-slate-200">
+                <ul class="py-1 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-600 dark:text-slate-300">IT</a>
+                  </li>
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
+                      data-dropdown-placement="right-start" type="button"
+                      class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-600 dark:text-slate-300 ">Programming<svg
+                        aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg></button>
+                    <div id="doubleDropdown"
+                      class="z-50 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-slate-800">
+                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                        <li>
+                          <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Python</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Java</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Machine
+                            Learning</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">DSA</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="block px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-600 dark:hover:text-white dark:text-slate-300">Science</a>
+                  </li>
+                </ul>
+                <div class="py-1">
                   <a href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Science</a>
-                </li>
-              </ul>
-              <div class="py-1">
-                <a href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
-                  out</a>
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign
+                    out</a>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Services</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Pricing</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Contact</a>
-          </li>
-        </ul>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200 ">Services</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200 ">Pricing</a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div class="sub-header bg-cyan-200 text-white text-center sticky top-0 w-full p-2 z-40 dark:bg-slate-500">
+      <a routerLink="/courses/html" class="px-2">SCIENSE</a>
+      <a routerLink="/courses/java" class="px-2">GOOGLE CERTIFICATE</a>
+      <a routerLink="/courses/javascript" class="px-2">JAVASCRIPT</a>
+      <a routerLink="/courses/css" class="px-2">BIOLOGY</a>
+      <a routerLink="/courses/bootstrap" class="px-2">ARTS</a>
+      <a routerLink="/courses/machine-learning" class="px-2">MACHINE LEARNING</a>
+      <a routerLink="/courses/nodejs" class="px-2">LAW</a>
+      <a routerLink="/courses/algorithms" class="px-2">ALGORITHMS</a>
     </div>
-  </nav>
-  <div class="sub-header bg-cyan-200 text-white text-center sticky top-0 w-full p-2 z-40">
-    <a routerLink="/courses/html" class="px-2">SCIENSE</a>
-    <a routerLink="/courses/java" class="px-2">GOOGLE CERTIFICATE</a>
-    <a routerLink="/courses/javascript" class="px-2">JAVASCRIPT</a>
-    <a routerLink="/courses/css" class="px-2">BIOLOGY</a>
-    <a routerLink="/courses/bootstrap" class="px-2">ARTS</a>
-    <a routerLink="/courses/machine-learning" class="px-2">MACHINE LEARNING</a>
-    <a routerLink="/courses/nodejs" class="px-2">LAW</a>
-    <a routerLink="/courses/algorithms" class="px-2">ALGORITHMS</a>
-  </div>
-</header>
+  </header>
 
 
   <main>
 
     <section
-      class="relative overflow-hidden w-full animated-background bg-gradient-to-r from-slate-200 via-slate-200 to-slate-300">
+      class="relative overflow-hidden w-full animated-background bg-gradient-to-r from-slate-200 via-slate-200 to-slate-300 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
       <div class="relative w-full overflow-hidden ">
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
         <div class="absolute w-15 h-15 bg-transparent border-6 border-white/80 animate-figure-animate"></div>
@@ -175,7 +176,9 @@
 
       <div class="relative z-10 p-10 ">
         <div class="flex flex-col items-center">
-          <h3 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-purple-700 my-4 text-center">What are you looking for?</h3>
+          <h3
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-purple-700 my-4 text-center">
+            What are you looking for?</h3>
           <div class="mt-4 relative flex items-center">
             <input type="search" placeholder="Search.." class="border-2 border-gray-400 p-2 rounded-l-md w-60"
               id="search-input">
@@ -188,74 +191,83 @@
             </ul>
           </div>
           <div class="relative inline-block mt-6">
-            <span class="text-xl md:text-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-sky-400 to-cyan-500">
+            <span
+              class="text-xl md:text-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-sky-400 to-cyan-500">
               Achieve your career goals
             </span>
-            <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-500 rounded-full"></span>
+            <span
+              class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-500 rounded-full"></span>
           </div>
           <div class="flex gap-4 mt-6">
-            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden"><a routerLink="/courses/full-stack" class=" ">Programming</a></p>
-            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer"><a class="">Biology</a></p>
-            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer"><a class="">Science</a></p>
-            <p class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden"><a class="">Law</a></p>
+            <p
+              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden">
+              <a routerLink="/courses/full-stack" class=" ">Programming</a></p>
+            <p
+              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer">
+              <a class="">Biology</a></p>
+            <p
+              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer">
+              <a class="">Science</a></p>
+            <p
+              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden">
+              <a class="">Law</a></p>
           </div>
         </div>
 
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white border p-4 rounded-md shadow">
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 ">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/certificate.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Earn Certificates</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Earn Certificates</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Get valuable certificates with subscription</p>
+              <p class="text-gray-600 dark:text-slate-100">Get valuable certificates with subscription</p>
             </div>
           </div>
 
-          <div class="bg-white border p-4 rounded-md shadow">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/knowledge.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Build knowledge</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Build knowledge</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Build your knowledge and enhance your expertise...</p>
+              <p class="text-gray-600 dark:text-slate-100">Build your knowledge and enhance your expertise...</p>
             </div>
           </div>
 
-          <div class="bg-white border p-4 rounded-md shadow">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/master.webp" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Master</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Master</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Master your skills from basics to practical use....</p>
+              <p class="text-gray-600 dark:text-slate-100">Master your skills from basics to practical use....</p>
             </div>
           </div>
         </div>
 
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white border p-4 rounded-md shadow">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/practice.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Practice</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Practice</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Sharpen your skills with hands-on challenges.</p>
+              <p class="text-gray-600 dark:text-slate-100">Sharpen your skills with hands-on challenges.</p>
             </div>
           </div>
 
-          <div class="bg-white border p-4 rounded-md shadow">
-            <img src="assets/img/general/read.webp"
-              class="w-24 h-24 rounded-lg mx-auto">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
+            <img src="assets/img/general/read.webp" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Read</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Read</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Expand your knowledge and deepen your expertise.</p>
+              <p class="text-gray-600 dark:text-slate-100">Expand your knowledge and deepen your expertise.</p>
             </div>
           </div>
 
-          <div class="bg-white border p-4 rounded-md shadow">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/learn.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
-              <h4 class="text-xl font-semibold text-gray-800">Learn</h4>
+              <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Learn</h4>
               <hr class="my-2">
-              <p class="text-gray-600">Build a strong foundation and grow with confidence.</p>
+              <p class="text-gray-600 dark:text-slate-100">Build a strong foundation and grow with confidence.</p>
             </div>
           </div>
         </div>
@@ -264,16 +276,17 @@
 
 
 
-    <div class="bg-gray-100 flex">
+    <div class="bg-gray-100 flex dark:bg-slate-800">
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
-         
-          <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+
+          <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white">
             You can access from anywhere.
             <br class="hidden lg:inline"><span class="text-indigo-500"> Unlimited Access to over 1,000 Courses</span>
           </h1>
-          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-            Get unlimited access to 1,000 free courses across various fields, from programming to design,science, anytime, anywhere.
+          <p class="mt-2 text-gray-600 sm:mt-4 sm:text-xl dark:text-slate-200">
+            Get unlimited access to 1,000 free courses across various fields, from programming to design,science,
+            anytime, anywhere.
           </p>
           <div class="mt-4 sm:mt-6">
             <a href="#"
@@ -287,30 +300,108 @@
           src="https://www.wemakescholars.com/uploads/blog/TopprofessionalITcoursetopursueincollege.jpg">
       </div>
     </div>
-    <section class="courses">
 
+    <section class="p-8 dark:bg-gray-800">
+
+
+      <div id="indicators-carousel" class="relative w-full dark:bg-gray-800" data-carousel="static">
+
+        <div class="relative h-80 overflow-hidden rounded-lg md:h-96 ">
+
+          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/1024x536/P/web/n/z/b/onlinecourses_shutterstock_490891228_2000px_728945.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://mindblowingstories.com/wp-content/uploads/2020/08/Online-Courses.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/online-courses.png"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://www.iaea.org/sites/default/files/styles/original_image_size/public/e-learning-v1.jpg?itok=hu4F8Lpr"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="https://elearningindustry.com/wp-content/uploads/2016/02/7-ways-to-improve-your-next-online-training-course-e1455200641116.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+        </div>
+
+        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+            data-carousel-slide-to="3"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+            data-carousel-slide-to="4"></button>
+        </div>
+
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+    </section>
+    <section class="courses dark:bg-gray-900 dark:text-slate-200">
       <div class="row p-6 my-4">
-
-
         <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
           <h4 class="text-2xl font-mono">Programming</h4>
-          <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
-            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          <a href="#_"
+            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
+            <span
+              class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-blue-500 group-hover:translate-x-0 ease dark:bg-blue-800">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
               </svg>
             </span>
-            <span class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+            <span
+              class="absolute flex items-center justify-center w-full h-full text-blue-500 transition-all duration-300 transform group-hover:translate-x-full ease ">View
+              All</span>
             <span class="relative invisible">View all</span>
           </a>
         </div>
 
         <div class="flex flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover"
-                  src="assets/img/course-img/data-science.jpg"
+                <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/data-science.jpg"
                   alt="">
               </div>
               <div class="p-4">
@@ -319,13 +410,13 @@
                 <h2 class="mt-2 mb-2  font-bold ">Data Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-blue-500">Price</span>&nbsp;<span class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Intermediate Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 bg-blue-500"></i> Intermediate Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -365,15 +456,14 @@
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
             <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover"
-                  src="assets/img/course-img/full-stack-web.jpg"
+                <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/full-stack-web.jpg"
                   alt="">
               </div>
               <div class="p-4">
                 <span
                   class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
                 <h2 class="mt-2 mb-2  font-bold">Web-development</h2>
-               <!--<p></p>-->
+                <!--<p></p>-->
                 <div class="mt-3 flex items-center">
                   <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
                     15</span>&nbsp;<span class="text-sm font-semibold"></span>
@@ -421,15 +511,14 @@
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
             <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover"
-                  src="assets/img/course-img/machine.webp"
+                <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/machine.webp"
                   alt="">
               </div>
               <div class="p-4">
                 <span
                   class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
                 <h2 class="mt-2 mb-2  font-bold">Machine Learning</h2>
-                  <!--<p></p>-->                      
+                <!--<p></p>-->
                 <div class="mt-3 flex items-center">
                   <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
@@ -477,15 +566,13 @@
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
             <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
               <div class="relative pb-48 overflow-hidden">
-                <img class="absolute inset-0 h-full w-full object-cover"
-                  src="assets/img/course-img/linux.jpg"
-                  alt="">
+                <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/linux.jpg" alt="">
               </div>
               <div class="p-4">
                 <span
                   class="inline-block px-2 py-1 leading-none bg-blue-300 text-blue-800 rounded-full font-semibold uppercase tracking-wide text-xs">Discount</span>
                 <h2 class="mt-2 mb-2  font-bold">Linux</h2>
-                 <!--<p></p>-->
+                <!--<p></p>-->
                 <div class="mt-3 flex items-center">
                   <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
                     8</span>&nbsp;<span class="text-sm font-semibold"></span>
@@ -529,24 +616,24 @@
               </div>
             </a>
           </div>
-
-
-
         </div>
       </div>
-
       <div class="row p-6 my-4">
-
-
         <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
           <h4 class="text-2xl font-mono">Science</h4>
-          <a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-indigo-500 rounded-full shadow-md group">
-            <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-indigo-500 group-hover:translate-x-0 ease">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          <a href="#_"
+            class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-indigo-500 rounded-full shadow-md group">
+            <span
+              class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-indigo-500 group-hover:translate-x-0 ease">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
               </svg>
             </span>
-            <span class="absolute flex items-center justify-center w-full h-full text-indigo-500 transition-all duration-300 transform group-hover:translate-x-full ease">View All</span>
+            <span
+              class="absolute flex items-center justify-center w-full h-full text-indigo-500 transition-all duration-300 transform group-hover:translate-x-full ease">View
+              All</span>
             <span class="relative invisible">View all</span>
           </a>
         </div>
@@ -612,8 +699,7 @@
             <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
-                  src="https://nailknowledge.org/wp-content/uploads/2021/04/chemical-1024x683.jpg"
-                  alt="">
+                  src="https://nailknowledge.org/wp-content/uploads/2021/04/chemical-1024x683.jpg" alt="">
               </div>
               <div class="p-4">
                 <span
@@ -774,38 +860,30 @@
               </div>
             </a>
           </div>
-          
-
-
-
         </div>
       </div>
-
-      
     </section>
-
-
     <section>
-      <div class="container max-w-full mx-auto py-24 px-6">
-        <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider">
+      <div class="container max-w-full mx-auto py-24 px-6 dark:bg-gray-800 ">
+        <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider dark:text-gray-100 ">
           Pricing
         </h1>
-        <p class="text-center text-lg text-gray-700 mt-2 px-6">
-        Check all plans
+        <p class="text-center text-lg text-gray-700 mt-2 px-6 dark:text-slate-300">
+          Check all plans
         </p>
         <div class="h-1 mx-auto bg-indigo-200 w-24 opacity-75 mt-4 rounded"></div>
 
         <div class="max-w-full md:max-w-6xl mx-auto my-3 md:px-8">
           <div class="relative  flex flex-col md:flex-row items-center">
             <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-mr-4">
-              <div class="bg-white text-black rounded-lg shadow-inner  overflow-hidden">
-                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
+              <div class="bg-white text-black rounded-lg shadow-inner  overflow-hidden dark:bg-gray-700 ">
+                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 dark:text-slate-200">
                   <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
                     Free Plan
                   </h1>
-                  <h2 class="text-sm text-gray-500 text-center pb-6">FREE</h2>
+                  <h2 class="text-sm text-gray-500 text-center pb-6 dark:text-gray-400">FREE</h2>
 
-                 Get in touch for details.
+                  Get in touch for details.
                 </div>
 
                 <div class="flex flex-wrap mt-3 px-6">
@@ -818,7 +896,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Limited Access</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Limited Access</span>
                     </li>
                     <li class="flex items-center">
                       <div class=" rounded-full p-2 fill-current text-green-700">
@@ -828,7 +906,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Free courses</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Free courses</span>
                     </li>
                     <li class="flex items-center">
                       <div class=" rounded-full p-2 fill-current text-green-700">
@@ -838,7 +916,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Free plan acccess</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Free plan acccess</span>
                     </li>
                   </ul>
                 </div>
@@ -860,7 +938,8 @@
                 <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
                   Basic
                 </h1>
-                <h2 class="text-sm text-gray-500 text-center pb-6"><span class="text-3xl"><sup>$</sup>9.9 </span> /mo</h2>
+                <h2 class="text-sm text-gray-500 text-center pb-6"><span class="text-3xl"><sup>$</sup>9.9 </span> /mo
+                </h2>
 
                 Get in touch for details.
               </div>
@@ -966,7 +1045,7 @@
       </div>
     </section>
 
-    <section class="faq bg-gray-100 relative w-full z-50">
+    <section class="faq bg-gray-100 relative w-full z-50 dark:bg-slate-800">
       <div class="faq-container mx-auto py-16 px-4 max-w-7xl serif">
         <div class="faq-header border-b-2 border-blue-600 w-10 mx-auto mb-6"></div>
         <h1 class="text-center text-2xl text-blue-900">Frequently Asked Questions</h1>
@@ -1013,9 +1092,9 @@
       </div>
     </section>
 
-    <section class="mb-32 text-gray-800 text-center bg-slate-200">
+    <section class="mb-32 text-gray-800 text-center bg-slate-200 dark:bg-slate-900">
 
-      <div class="px-6 py-12 md:px-12 bg-slate-200">
+      <div class="px-6 py-12 md:px-12 bg-slate-200 dark:bg-slate-900">
         <div class="container mx-auto xl:px-32">
           <div class="grid lg:grid-cols-2  items-center">
             <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
@@ -1069,27 +1148,27 @@
       </div>
     </section>
 
-
-
   </main>
 
-  <footer class="p-8 text-slate-500">
-    <section class="flex md:flex-col lg:flex-row lg:items-center mb-6">
+  <footer class="p-8 text-slate-500 dark:bg-slate-900">
+    <section class="flex md:flex-col lg:flex-row lg:items-center mb-6 ">
       <div class="text-center mx-auto md:mb-6 lg:text-left">
         <a href="#" class="block mb-4">
-          <img class="block h-8 mx-auto lg:mx-0" src="assets/img/logo/logo-light.png" width="200px"
-            height="200px" alt="Workflow">
+          <img class="block h-8 mx-auto lg:mx-0" src="assets/img/logo/logo-light.png" width="200px" height="200px"
+            alt="Workflow">
         </a>
-        <p class="mb-4 text-sm">Making the world a better place through <br> constructing elegant websites.</p>
-        <span class="space-x-6">
-          <a href="#" class="hover:text-indigo-500"><i class="fab fa-facebook"></i></a>
-          <a href="https://github.com/marck001/Tailwind-website" class="hover:text-indigo-500"><i class="fa-brands fa-github"></i></i></a>
-          <a href="#" class="hover:text-indigo-500"><i class="fab fa-twitter"></i></a>
+        <p class="mb-4 text-sm dark:text-slate-200">Making the world a better place through <br> constructing elegant websites.</p>
+        <span class="space-x-6 dark:text-slate-300 text-2xl">
+          <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/marck001/Tailwind-website" class="hover:text-indigo-500"><i
+              class="fa-brands fa-github"></i></i></a>
+          <a href="https://api.whatsapp.com" target="_blank" class="hover:text-green-500"><i
+              class="fa-brands fa-whatsapp"></i></a>
         </span>
       </div>
       <ul class="hidden md:flex flex-auto justify-around">
         <li>
-          <h5 class="text-slate-400 font-medium tracking-wider mb-3">COURSES</h5>
+          <h5 class="text-slate-400 font-medium tracking-wider mb-3 dark:text-slate-200">COURSES</h5>
           <ul class="space-y-3">
             <li><a href="#" class="hover:opacity-75">Marketing</a></li>
             <li><a href="#" class="hover:opacity-75">Analytics</a></li>
@@ -1098,7 +1177,7 @@
           </ul>
         </li>
         <li>
-          <h5 class="text-slate-400 font-medium tracking-wider mb-3">Web-development</h5>
+          <h5 class="text-slate-400 font-medium tracking-wider mb-3 dark:text-slate-200">Web-development</h5>
           <ul class="space-y-3">
             <li><a href="#" class="hover:opacity-75">Full-Stack</a></li>
             <li><a href="#" class="hover:opacity-75">Documentation</a></li>
@@ -1107,7 +1186,7 @@
           </ul>
         </li>
         <li>
-          <h5 class="text-slate-400 font-medium tracking-wider mb-3">COMPANY</h5>
+          <h5 class="text-slate-400 font-medium tracking-wider mb-3 dark:text-slate-200">COMPANY</h5>
           <ul class="space-y-3">
             <li><a href="#" class="hover:opacity-75">About</a></li>
             <li><a href="#" class="hover:opacity-75">Blog</a></li>
@@ -1117,7 +1196,7 @@
           </ul>
         </li>
         <li>
-          <h5 class="text-slate-400 font-medium tracking-wider mb-3">Artificial Intelligence</h5>
+          <h5 class="text-slate-400 font-medium tracking-wider mb-3 dark:text-slate-200">Artificial Intelligence</h5>
           <ul class="space-y-3">
             <li><a href="#" class="hover:opacity-75">Deep learning</a></li>
             <li><a href="#" class="hover:opacity-75">Machine learning</a></li>
@@ -1127,7 +1206,7 @@
       </ul>
     </section>
     <hr>
-    <h6 class="py-6 text-center"> © 2024 MacKourse, Inc. All rights reserved.</h6>
+    <h6 class="py-6 text-center dark:text-slate-300"> © 2024 MacKourse, Inc. All rights reserved.</h6>
   </footer>
 
   <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
