@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MacKourse</title>
+  <!--    <link href="./css/output.css" rel="stylesheet"> <link rel="stylesheet" href="/src/css/styles.css">-->
+
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/src/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +41,7 @@
 
 </head>
 
-<body>
+<body class="dark:bg-gray-900">
 
   <header>
     <nav class="px-2 py-2 bg-white border-gray-200  dark:border-gray-700 dark:bg-slate-950">
@@ -140,19 +142,29 @@
               <a href="#"
                 class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200">Contact</a>
             </li>
+            <li>
+              <a href="#"
+                class="btn-sun flex flex-row justify-center py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200 text-xl">
+                <i class="fa-solid fa-sun "></i>
+              </a>
+              <a href="#"
+                class="btn-moon flex flex-row justify-center py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-slate-200 text-xl">
+                <i class="fa-solid fa-moon "></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="sub-header bg-cyan-200 text-white text-center sticky top-0 w-full p-2 z-40 dark:bg-slate-500">
-      <a routerLink="/courses/html" class="px-2">SCIENSE</a>
-      <a routerLink="/courses/java" class="px-2">GOOGLE CERTIFICATE</a>
-      <a routerLink="/courses/javascript" class="px-2">JAVASCRIPT</a>
-      <a routerLink="/courses/css" class="px-2">BIOLOGY</a>
-      <a routerLink="/courses/bootstrap" class="px-2">ARTS</a>
-      <a routerLink="/courses/machine-learning" class="px-2">MACHINE LEARNING</a>
-      <a routerLink="/courses/nodejs" class="px-2">LAW</a>
-      <a routerLink="/courses/algorithms" class="px-2">ALGORITHMS</a>
+      <a class="px-2">SCIENSE</a>
+      <a class="px-2">GOOGLE CERTIFICATE</a>
+      <a class="px-2">JAVASCRIPT</a>
+      <a class="px-2">BIOLOGY</a>
+      <a class="px-2">ARTS</a>
+      <a class="px-2">MACHINE LEARNING</a>
+      <a class="px-2">LAW</a>
+      <a class="px-2">ALGORITHMS</a>
     </div>
   </header>
 
@@ -180,9 +192,9 @@
             class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-blue-500 to-purple-700 my-4 text-center">
             What are you looking for?</h3>
           <div class="mt-4 relative flex items-center">
-            <input type="search" placeholder="Search.." class="border-2 border-gray-400 p-2 rounded-l-md w-60"
+            <input type="search" placeholder="Search.." class="border-2 border-gray-400 p-2 rounded-l-md w-60  dark:text-slate-400 dark:bg-gradient-to-r dark:from-slate-800 dark:via-slate-800 dark:to-slate-900"
               id="search-input">
-            <button type="submit" id="search-button" class="bg-gray-700 p-2 rounded-r-md text-white">
+            <button type="submit" id="search-button" class="bg-gray-700 p-2 rounded-r-md text-white dark:border-gray-800">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
             <ul id="search-results"
@@ -199,36 +211,44 @@
               class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-teal-300 via-teal-400 to-cyan-500 rounded-full"></span>
           </div>
           <div class="flex gap-4 mt-6">
-            <p
-              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden">
-              <a routerLink="/courses/full-stack" class=" ">Programming</a></p>
-            <p
-              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer">
-              <a class="">Biology</a></p>
-            <p
-              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer">
-              <a class="">Science</a></p>
-            <p
-              class="rounded-lg bg-neutral-50 p-3 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white text-blue-500 transition duration-600 ease-out cursor-pointer max-sm:hidden">
-              <a class="">Law</a></p>
+            <p class="group rounded-lg bg-neutral-50 p-3 text-blue-500 border  transition duration-600 ease-out cursor-pointer max-sm:hidden 
+                   dark:bg-gray-900 dark:text-gray-100 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white
+                   dark:border-purple-400 dark:border-2">
+              <a routerLink="/courses/full-stack" class=" ">Programming</a>
+            </p>
+
+            <p class="group rounded-lg bg-neutral-50 p-3 text-blue-500 border  transition duration-600 ease-out cursor-pointer max-sm:hidden 
+                 dark:bg-gray-900 dark:text-gray-100 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white
+                 dark:border-purple-400 dark:border-2">
+              <a class="">Biology</a>
+            </p>
+            <p class="group rounded-lg bg-neutral-50 p-3 text-blue-500 border  transition duration-600 ease-out cursor-pointer max-sm:hidden 
+                   dark:bg-gray-900 dark:text-gray-100 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white
+                   dark:border-purple-400 dark:border-2">
+              <a class="">Science</a>
+            </p>
+            <p class="group rounded-lg bg-neutral-50 p-3 text-blue-500 border  transition duration-600 ease-out cursor-pointer max-sm:hidden 
+                   dark:bg-gray-900 dark:text-gray-100 hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-blue-400 hover:text-white
+                   dark:border-purple-400 dark:border-2">
+              <a class="">Law</a>
+            </p>
           </div>
         </div>
 
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 ">
-          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
+          <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700 ">
             <img src="assets/img/general/certificate.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Earn Certificates</h4>
-              <hr class="my-2">
+              <hr class="my-2 ">
               <p class="text-gray-600 dark:text-slate-100">Get valuable certificates with subscription</p>
             </div>
           </div>
-
           <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
             <img src="assets/img/general/knowledge.png" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Build knowledge</h4>
-              <hr class="my-2">
+              <hr class="my-2 ">
               <p class="text-gray-600 dark:text-slate-100">Build your knowledge and enhance your expertise...</p>
             </div>
           </div>
@@ -245,7 +265,7 @@
 
         <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white border p-4 rounded-md shadow dark:bg-slate-700">
-            <img src="assets/img/general/practice.png" class="w-24 h-24 rounded-lg mx-auto">
+            <img src="assets/img/general/practice2.webp" class="w-24 h-24 rounded-lg mx-auto">
             <div class="text-center mt-4">
               <h4 class="text-xl font-semibold text-gray-800 dark:text-slate-200">Practice</h4>
               <hr class="my-2">
@@ -280,7 +300,8 @@
       <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
         <div class="xl:max-w-lg xl:ml-auto">
 
-          <h1 class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white">
+          <h1
+            class="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl dark:text-white">
             You can access from anywhere.
             <br class="hidden lg:inline"><span class="text-indigo-500"> Unlimited Access to over 1,000 Courses</span>
           </h1>
@@ -301,7 +322,14 @@
       </div>
     </div>
 
-    <section class="p-8 dark:bg-gray-800">
+
+    <a href="https://api.whatsapp.com" class="whatsapp-button fixed right-5 bottom-10 z-50" target="_blank"
+     >
+      <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="wasap button">
+    </a>
+
+
+    <section class="p-8 dark:bg-gray-900">
 
 
       <div id="indicators-carousel" class="relative w-full dark:bg-gray-800" data-carousel="static">
@@ -309,7 +337,8 @@
         <div class="relative h-80 overflow-hidden rounded-lg md:h-96 ">
 
           <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/1024x536/P/web/n/z/b/onlinecourses_shutterstock_490891228_2000px_728945.jpg"
+            <img
+              src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/1024x536/P/web/n/z/b/onlinecourses_shutterstock_490891228_2000px_728945.jpg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
 
@@ -324,12 +353,14 @@
           </div>
 
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://www.iaea.org/sites/default/files/styles/original_image_size/public/e-learning-v1.jpg?itok=hu4F8Lpr"
+            <img
+              src="https://www.iaea.org/sites/default/files/styles/original_image_size/public/e-learning-v1.jpg?itok=hu4F8Lpr"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
 
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://elearningindustry.com/wp-content/uploads/2016/02/7-ways-to-improve-your-next-online-training-course-e1455200641116.jpg"
+            <img
+              src="https://elearningindustry.com/wp-content/uploads/2016/02/7-ways-to-improve-your-next-online-training-course-e1455200641116.jpg"
               class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
         </div>
@@ -351,8 +382,8 @@
           class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-prev>
           <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-blue-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-200 rtl:rotate-180" aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M5 1 1 5l4 4" />
@@ -364,8 +395,8 @@
           class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-next>
           <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-blue-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-200 rtl:rotate-180" aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="m1 9 4-4-4-4" />
@@ -376,10 +407,10 @@
       </div>
 
     </section>
-    <section class="courses dark:bg-gray-900 dark:text-slate-200">
+    <section class="courses dark:bg-gray-900 dark:text-slate-300">
       <div class="row p-6 my-4">
         <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
-          <h4 class="text-2xl font-mono">Programming</h4>
+          <h4 class="text-2xl font-mono dark:text-slate-200">Programming</h4>
           <a href="#_"
             class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-500 rounded-full shadow-md group">
             <span
@@ -399,7 +430,8 @@
 
         <div class="flex flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/data-science.jpg"
                   alt="">
@@ -410,8 +442,9 @@
                 <h2 class="mt-2 mb-2  font-bold ">Data Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600 dark:text-blue-500">Price</span>&nbsp;<span class="font-bold text-xl">$
-                    10</span>&nbsp;<span class="text-sm font-semibold"></span>
+                  <span class="text-sm font-semibold text-gray-600 dark:text-blue-500">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
+                    10</span>&nbsp;<span class="text-sm font-semibold "></span>
                 </div>
               </div>
               <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
@@ -444,7 +477,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-gray-200">4.7</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -454,8 +487,9 @@
           </div>
 
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
-              <div class="relative pb-48 overflow-hidden">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
+              <div class="relative pb-48 overflow-hidden ">
                 <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/full-stack-web.jpg"
                   alt="">
               </div>
@@ -465,13 +499,14 @@
                 <h2 class="mt-2 mb-2  font-bold">Web-development</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-blue-500">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     15</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-blue-500"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -499,7 +534,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.4</span></div>
+                </svg><span class="ml-2 dark:text-gray-200">4.4</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -509,7 +544,8 @@
           </div>
 
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/machine.webp"
                   alt="">
@@ -520,13 +556,14 @@
                 <h2 class="mt-2 mb-2  font-bold">Machine Learning</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600  dark:text-blue-500">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-blue-500"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -554,7 +591,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.8</span></div>
+                </svg><span class="ml-2 dark:text-gray-200">4.8</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -564,7 +601,8 @@
           </div>
 
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover" src="assets/img/course-img/linux.jpg" alt="">
               </div>
@@ -574,13 +612,15 @@
                 <h2 class="mt-2 mb-2  font-bold">Linux</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-blue-500">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     8</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="fa-brands fa-linux text-gray-900 mr-2 dark:text-blue-500"></i>
+                  Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -608,7 +648,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-gray-200">4.7</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-blue-500 to-blue-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -620,7 +660,7 @@
       </div>
       <div class="row p-6 my-4">
         <div class="flex justify-between gap-4 p-4 max-md:flex-col text-center">
-          <h4 class="text-2xl font-mono">Science</h4>
+          <h4 class="text-2xl font-mono dark:text-slate-200">Science</h4>
           <a href="#_"
             class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-indigo-500 rounded-full shadow-md group">
             <span
@@ -640,7 +680,8 @@
 
         <div class="flex flex-wrap">
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
                   src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/23/22bc54f77f45a2b057f4ff518d272f/iStock-1169539468.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=204&fit=crop&q=50"
@@ -652,13 +693,14 @@
                 <h2 class="mt-2 mb-2  font-bold ">Data Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-purple-300">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-purple-300"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -686,7 +728,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-slate-200">4.5</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -696,7 +738,8 @@
           </div>
 
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
                   src="https://nailknowledge.org/wp-content/uploads/2021/04/chemical-1024x683.jpg" alt="">
@@ -707,13 +750,14 @@
                 <h2 class="mt-2 mb-2  font-bold ">Chemical Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-purple-300">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-purple-300"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -741,7 +785,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-slate-200">4.2</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -750,7 +794,8 @@
             </a>
           </div>
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden  dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ3fkhqS75e7wMU7IU9h45n6f2J5DMSdHo3w&s"
@@ -762,13 +807,14 @@
                 <h2 class="mt-2 mb-2  font-bold ">Medicine Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-purple-300">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     10</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-purple-300"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -796,7 +842,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-slate-200">4.7</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -806,7 +852,8 @@
           </div>
 
           <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4 hover:scale-105">
-            <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden ">
+            <a href=""
+              class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden dark:bg-slate-800">
               <div class="relative pb-48 overflow-hidden">
                 <img class="absolute inset-0 h-full w-full object-cover"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUdF7IvR67glRsR8yVUIfXTet1BNSaZCDPw&s"
@@ -818,13 +865,14 @@
                 <h2 class="mt-2 mb-2  font-bold ">Biology Science</h2>
                 <!--<p></p>-->
                 <div class="mt-3 flex items-center">
-                  <span class="text-sm font-semibold text-gray-600">Price</span>&nbsp;<span class="font-bold text-xl">$
+                  <span class="text-sm font-semibold text-gray-600 dark:text-purple-300">Price</span>&nbsp;<span
+                    class="font-bold text-xl">$
                     16</span>&nbsp;<span class="text-sm font-semibold"></span>
                 </div>
               </div>
-              <div class="p-4 border-t border-b text-xs text-gray-800">
+              <div class="p-4 border-t border-b text-xs text-gray-800 dark:text-slate-200">
                 <span class="flex items-center">
-                  <i class="far fa-address-card fa-fw text-gray-900 mr-2"></i> Beginner Course
+                  <i class="far fa-address-card fa-fw text-gray-900 mr-2 dark:text-purple-300"></i> Beginner Course
                 </span>
               </div>
               <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24"
@@ -852,7 +900,7 @@
                   <path
                     d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z">
                   </path>
-                </svg><span class="ml-2">4.7</span></div>
+                </svg><span class="ml-2 dark:text-slate-200">4.7</span></div>
               <div class="flex items-center p-4 justify-end ">
                 <button
                   class="bg-gradient-to-r from-indigo-500 to-indigo-800 text-white  ease px-4 py-2 text-xl rounded font-medium focus:ring ring-black ring-opacity-10 gradient element-to-rotate hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-700 hover:to-blue-400  transition duration-600 ease-out">Get
@@ -877,7 +925,8 @@
           <div class="relative  flex flex-col md:flex-row items-center">
             <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-mr-4">
               <div class="bg-white text-black rounded-lg shadow-inner  overflow-hidden dark:bg-gray-700 ">
-                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 dark:text-slate-200">
+                <div
+                  class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 dark:text-slate-200">
                   <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
                     Free Plan
                   </h1>
@@ -923,18 +972,20 @@
                 <div class=" flex items-center p-8  uppercase">
                   <button class="mt-3 text-lg font-semibold 
       bg-black w-full text-white rounded-lg 
-      px-6 py-3 block shadow-xl hover:bg-gray-700">
+      px-6 py-3 block shadow-xl hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-950">
                     Select
                   </button>
                 </div>
               </div>
             </div>
-            <div class="w-full max-w-md sm:w-2/3 lg:w-1/3 sm:my-5 my-8 relative z-10 bg-white rounded-lg shadow-lg">
+            <div
+              class="w-full max-w-md sm:w-2/3 lg:w-1/3 sm:my-5 my-8 relative z-10 bg-white rounded-lg shadow-lg dark:bg-gray-800">
               <div
-                class="text-sm leading-none rounded-t-lg bg-gray-200 text-black font-semibold uppercase py-4 text-center tracking-wide">
+                class="text-sm leading-none rounded-t-lg bg-gray-200 text-black font-semibold uppercase py-4 text-center tracking-wide dark:bg-slate-600 dark:text-gray-200">
                 Most Popular
               </div>
-              <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
+              <div
+                class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 dark:text-slate-200">
                 <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
                   Basic
                 </h1>
@@ -953,7 +1004,7 @@
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                       </svg>
                     </div>
-                    <span class="text-gray-700 text-lg ml-3">Unlimited Access</span>
+                    <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Unlimited Access</span>
                   </li>
                   <li class="flex items-center">
                     <div class=" rounded-full p-2 fill-current text-green-700">
@@ -963,7 +1014,7 @@
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                       </svg>
                     </div>
-                    <span class="text-gray-700 text-lg ml-3">Paid Courses and videos</span>
+                    <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Paid Courses and videos</span>
                   </li>
                   <li class="flex items-center">
                     <div class=" rounded-full p-2 fill-current text-green-700">
@@ -973,7 +1024,7 @@
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                       </svg>
                     </div>
-                    <span class="text-gray-700 text-lg ml-3">Paid plan</span>
+                    <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Paid plan</span>
                   </li>
                 </ul>
               </div>
@@ -981,15 +1032,16 @@
               <div class=" flex items-center p-8  uppercase">
                 <button class="mt-3 text-lg font-semibold 
       bg-black w-full text-white rounded-lg 
-      px-6 py-3 block shadow-xl hover:bg-gray-700">
+      px-6 py-3 block shadow-xl hover:bg-gray-700 dark:bg-gray-900 dark:hover:bg-gray-950">
                   Select
                 </button>
               </div>
             </div>
             <div class="w-11/12 max-w-sm sm:w-3/5 lg:w-1/3 sm:my-5 my-8 relative z-0 rounded-lg shadow-lg md:-ml-4">
-              <div class="bg-white text-black rounded-lg shadow-inner overflow-hidden">
-                <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
-                  <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
+              <div class="bg-white text-black rounded-lg shadow-inner overflow-hidden dark:bg-gray-700">
+                <div
+                  class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6 dark:text-slate-200">
+                  <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide ">
                     Pro
                   </h1>
                   <h2 class="text-sm text-gray-500 text-center pb-6"><sup>$</sup>19.9/mo</h2>
@@ -1006,7 +1058,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Unlimited Access</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Unlimited Access</span>
                     </li>
                     <li class="flex items-center">
                       <div class=" rounded-full p-2 fill-current text-green-700">
@@ -1016,7 +1068,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Paid Courses + tutoring</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Paid Courses + tutoring</span>
                     </li>
                     <li class="flex items-center">
                       <div class=" rounded-full p-2 fill-current text-green-700">
@@ -1026,7 +1078,7 @@
                           <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                       </div>
-                      <span class="text-gray-700 text-lg ml-3">Paid plan</span>
+                      <span class="text-gray-700 text-lg ml-3 dark:text-gray-300">Paid plan</span>
                     </li>
                   </ul>
                 </div>
@@ -1034,7 +1086,7 @@
                 <div class="flex items-center p-8  uppercase">
                   <button class="mt-3 text-lg font-semibold 
       bg-black w-full text-white rounded-lg 
-      px-6 py-3 block shadow-xl hover:bg-gray-700">
+      px-6 py-3 block shadow-xl hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-950">
                     Select
                   </button>
                 </div>
@@ -1045,46 +1097,46 @@
       </div>
     </section>
 
-    <section class="faq bg-gray-100 relative w-full z-50 dark:bg-slate-800">
+    <section class="faq bg-gray-100 relative w-full z-0 dark:bg-slate-900">
       <div class="faq-container mx-auto py-16 px-4 max-w-7xl serif">
         <div class="faq-header border-b-2 border-blue-600 w-10 mx-auto mb-6"></div>
-        <h1 class="text-center text-2xl text-blue-900">Frequently Asked Questions</h1>
+        <h1 class="text-center text-3xl text-blue-700">Frequently Asked Questions</h1>
         <div class="accordion pt-12">
           <details class="mb-4">
             <summary
-              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white dark:bg-slate-500 dark:text-slate-200">
               <div class="flex justify-between items-center">
                 <span>Does the subscription plan include this course?</span>
                 <span class="transition-transform duration-300"></span>
               </div>
             </summary>
-            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg dark:bg-slate-700 dark:text-slate-300">
               <p>90% of courses are included with the subscription plan, providing access to all of them.</p>
             </div>
           </details>
 
           <details class="mb-4">
             <summary
-              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white dark:bg-slate-500 dark:text-slate-200">
               <div class="flex justify-between items-center">
                 <span>What's the validity of this course?</span>
                 <span class="transition-transform duration-300"></span>
               </div>
             </summary>
-            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg dark:bg-slate-700 dark:text-slate-300">
               <p>The course content comes with over 1 year of validity.</p>
             </div>
           </details>
 
           <details class="mb-4">
             <summary
-              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 hover:text-white">
+              class="cursor-pointer bg-gray-200 border-b border-gray-300 rounded-lg p-5 transition-all duration-300 hover:bg-blue-600 dark:hover:bg-blue-800 hover:text-white dark:bg-slate-500 dark:text-slate-200">
               <div class="flex justify-between items-center">
                 <span>Which courses are for free?</span>
                 <span class="transition-transform duration-300"></span>
               </div>
             </summary>
-            <div class="bg-white p-5 border-t border-gray-300 rounded-lg">
+            <div class="bg-white p-5 border-t border-gray-300 rounded-lg dark:bg-slate-700 dark:text-slate-300">
               <p>We have a whole section of free courses that you can check.</p>
             </div>
           </details>
@@ -1094,7 +1146,7 @@
 
     <section class="mb-32 text-gray-800 text-center bg-slate-200 dark:bg-slate-900">
 
-      <div class="px-6 py-12 md:px-12 bg-slate-200 dark:bg-slate-900">
+      <div class="px-6 py-12 md:px-12 bg-slate-200 dark:bg-slate-800">
         <div class="container mx-auto xl:px-32">
           <div class="grid lg:grid-cols-2  items-center">
             <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
@@ -1104,19 +1156,22 @@
                 <form>
                   <div class="form-group mb-6">
                     <input type="text"
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      dark:bg-slate-700 dark:text-gray-100"
                       id="exampleInput7" placeholder="Name" />
                   </div>
                   <div class="form-group mb-6">
                     <input type="email"
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      dark:bg-slate-700 dark:text-gray-100"
                       id="exampleInput8" placeholder="Email address" />
                   </div>
                   <div class="form-group mb-6">
-                    <label for="referrer" class="text-right ">How did you hear about us?</label>
+                    <label for="referrer" class="text-right dark:text-slate-200">How did you hear about us?</label>
                     <select name="referrer"
-                      class="form-control block  px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none">
-                      <option value="">select one</option>
+                      class="form-control block  px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                      dark:bg-slate-700 dark:text-gray-100">
+                      <option value="">Select one</option>
                       <option value="1">News</option>
                       <option value="2">Channel</option>
                       <option value="4">Other</option>
@@ -1125,18 +1180,19 @@
                   </div>
                   <div class="form-group mb-6">
                     <textarea
-                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                      class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none dark:bg-slate-700 dark:text-gray-100"
                       id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
                   </div>
                   <div class="form-group form-check text-center mb-6">
                     <input type="checkbox"
-                      class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                      class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white dark:bg-slate-600 dark:checked:bg-blue-700 checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
                       id="exampleCheck87" checked />
-                    <label class="form-check-label inline-block text-gray-800" for="exampleCheck87"> I accept the terms
+                    <label class="form-check-label inline-block text-gray-800 dark:text-slate-200" for="exampleCheck87">
+                      I accept the terms
                       and conditions</label>
                   </div>
                   <button type="submit"
-                    class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                    class="w-full px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out dark:bg-blue-800">
                     Register
                   </button>
                 </form>
@@ -1157,7 +1213,8 @@
           <img class="block h-8 mx-auto lg:mx-0" src="assets/img/logo/logo-light.png" width="200px" height="200px"
             alt="Workflow">
         </a>
-        <p class="mb-4 text-sm dark:text-slate-200">Making the world a better place through <br> constructing elegant websites.</p>
+        <p class="mb-4 text-sm dark:text-slate-200">Making the world a better place through <br> constructing elegant
+          websites.</p>
         <span class="space-x-6 dark:text-slate-300 text-2xl">
           <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook"></i></a>
           <a href="https://github.com/marck001/Tailwind-website" class="hover:text-indigo-500"><i
@@ -1208,7 +1265,7 @@
     <hr>
     <h6 class="py-6 text-center dark:text-slate-300"> © 2024 MacKourse, Inc. All rights reserved.</h6>
   </footer>
-
+  <script src="js/app.js"></script>
   <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 </body>
 
